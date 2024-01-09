@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { validateName, validateEmail, validateMessage } from '../utils/helpers';
+import emailjs from '@emailjs/browser';
 
 function Contact(){
     const [name, setName] = useState('');
@@ -23,6 +24,7 @@ function Contact(){
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
+        emailjs.sendForm('service_8y8dypr', 'template_2s9hlgo', e.target, 'Bnhbsj36O7b1XByj2');
 
         if(!validateName(name)){
             setErrorMessage('Name is required');
@@ -63,7 +65,9 @@ function Contact(){
                     placeholder='Write your question or concern here'
                 />
 
-                <button type='submit' className='btn btn-primary'>Send</button>
+                <input 
+                    type='submit' 
+                    value='Send' />
             </form>
             {errorMessage && (
                 <div className='error'>
