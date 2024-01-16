@@ -28,7 +28,7 @@ function Contact(){
         emailjs.sendForm('service_8y8dypr', 'template_2s9hlgo', e.target, 'Bnhbsj36O7b1XByj2');
 
         if(!validateName(name)){
-            setErrorMessage('Name is required');
+            setErrorMessage('Name required');
             return;
         }
         if(!validateEmail(email)){
@@ -59,17 +59,18 @@ function Contact(){
                     type='email'
                     placeholder='someone@example.com'
                 />
-                <textarea 
+                <input className='message-box'
                     value={message}
                     name='message'
                     onChange={handleInputChange}
                     type='text'
-                    placeholder='Write your question or concern here'
+                    placeholder='Write questions/concerns here'
                 />
-
-                <input className='submit-button'
-                    type='submit' 
-                    value='Send' />
+                <button
+                    disabled={!name || !email || !message}
+                    type='submit'
+                    variant=''>Send
+                </button>
             </form>
             {errorMessage && (
                 <div className='error'>

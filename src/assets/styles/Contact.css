@@ -1,26 +1,28 @@
 .contact-title {
     display: flex;
     justify-content: flex-start;
-    padding-top: 30px;
+    padding-top: 100px;
     padding-bottom: 30px;
+    padding-left: 100px;
 }
 
 form {
     display: flex;
     flex-direction: column;
+    padding-left: 100px;
 }
 
 input {
     width: 300px;
-    padding: 5px;
+    padding: 7px;
     margin-bottom: 20px;
 }
 
-textarea {
-    width: 300px;
+.message-box {
+    height: 100px;
 }
 
-.submit-button {
-    width: 80px;
-    margin-top: 15px;
+button {
+    height: 40px;
+    width: 100px;
 }
