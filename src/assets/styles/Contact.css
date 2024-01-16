@@ -1,0 +1,26 @@
+.contact-title {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    width: 300px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 300px;
+}
+
+.submit-button {
+    width: 80px;
+    margin-top: 15px;
+}

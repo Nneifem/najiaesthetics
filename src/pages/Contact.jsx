@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { validateName, validateEmail, validateMessage } from '../utils/helpers';
+import '../assets/styles/Contact.css'
 import emailjs from '@emailjs/browser';
 
 function Contact(){
@@ -42,6 +43,7 @@ function Contact(){
 
     return(
         <>
+            <h1 className='contact-title'>Contact</h1>
             <form onSubmit={handleFormSubmit}>
                 <input 
                     value={name}
@@ -65,7 +67,7 @@ function Contact(){
                     placeholder='Write your question or concern here'
                 />
 
-                <input 
+                <input className='submit-button'
                     type='submit' 
                     value='Send' />
             </form>
