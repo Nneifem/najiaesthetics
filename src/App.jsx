@@ -1,14 +1,14 @@
 import { Outlet } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Contact from './pages/Contact'
+import Navigation from './components/Navigation'
 import './App.css'
 
 function App() {
 
   return (
     <>
+      <Navigation />
       <Outlet />
-      <Contact />
     </>
   )
 }
